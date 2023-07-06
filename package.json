@@ -1,0 +1,29 @@
+{
+  "name": "esbuild-gjs",
+  "version": "1.0.0",
+  "description": "Gjs Plugin for ESBuild",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc"
+  },
+  "keywords": [
+    "esbuild",
+    "gjs"
+  ],
+  "maintainers": [
+    "Rubicon Rowe <l1589002388@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "esbuild": "^0.18.10"
+  },
+  "devDependencies": {
+    "@tsconfig/node-lts": "^18.12.2",
+    "@types/node": "^20.3.2",
+    "esbuild": "^0.18.10",
+    "typescript": "^5.1.3"
+  }
+}
