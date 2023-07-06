@@ -9,6 +9,12 @@
     "build": "tsc",
     "prepare": "tsc"
   },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "LICENSE",
+    "tsconfig.json"
+  ],
   "keywords": [
     "esbuild",
     "gjs"
