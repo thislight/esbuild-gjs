@@ -28,6 +28,7 @@ export default function ({
       build.onResolve({ filter: /^gi:/ }, () => ({
         external: true,
         namespace: "gjs",
+        sideEffects: false,
       }));
 
       build.onResolve({ filter: /^(file)|(resource):/ }, () => ({
@@ -42,6 +43,7 @@ export default function ({
         build.onResolve({ filter: regex }, () => ({
           external: true,
           namespace: "gjs",
+          sideEffects: false,
         }));
       }
     },
