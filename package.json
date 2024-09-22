@@ -1,6 +1,6 @@
 {
   "name": "esbuild-gjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gjs Plugin for ESBuild",
   "main": "index.js",
   "types": "index.d.ts",
@@ -30,6 +30,7 @@
     "@tsconfig/node-lts": "^18.12.2",
     "@types/node": "^20.3.2",
     "esbuild": "^0.18.10",
+    "prettier": "^3.3.2",
     "typescript": "^5.1.3"
   }
 }
