@@ -1,7 +1,8 @@
 {
-    "files": ["index.ts"],
-    "compilerOptions": {
-        "composite": true
-    },
-    "extends": "@tsconfig/node-lts/tsconfig.json",
+  "files": ["index.ts"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"]
+  },
+  "extends": "@tsconfig/node-lts/tsconfig.json"
 }
