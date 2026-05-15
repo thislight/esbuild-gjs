@@ -1,4 +1,3 @@
-pnpm-lock.yaml
 !examples/**/pnpm-lock.yaml
 index.d.ts
 index.js
