@@ -74,8 +74,14 @@ export default function ({
         opts.metafile = true;
 
         build.onEnd(async (result) => {
+          if (result.errors.length > 0) {
+            return;
+          }
+
           const metafile = result.metafile;
-          if (!metafile) throw new Error("unreachable");
+          if (!metafile) {
+            throw new Error("Metafile is not emitted");
+          }
 
           const resources = new Map<string, ResourceItem[]>();
           const files = [] as ResourceItem[];
@@ -86,13 +92,13 @@ export default function ({
           }
 
           const text = Array.from(generateResourceManifest(resources)).join(
-            "\n"
+            "\n",
           );
           const parentPath =
             opts.outdir ?? (opts.outfile ? path.dirname(opts.outfile) : ".");
           const manifestPath = path.join(
             parentPath,
-            writeResourceManifest.filename
+            writeResourceManifest.filename,
           );
 
           try {
@@ -131,7 +137,7 @@ export default function ({
 
       if (builtinModules.length > 0) {
         const regex = new RegExp(
-          `^${builtinModules.map((name) => `(${name})`).join("|")}$`
+          `^${builtinModules.map((name) => `(${name})`).join("|")}$`,
         );
         build.onResolve({ filter: regex }, () => ({
           external: true,
